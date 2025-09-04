@@ -165,6 +165,7 @@ class EnergyGARCHModel:
         return fig
 
 # Test your GARCH implementation
+# Test your GARCH implementation
 if __name__ == "__main__":
     print("🛢️  Testing GARCH model with Energy Futures...")
     
@@ -202,19 +203,17 @@ if __name__ == "__main__":
     
     print(f"\n✅ GARCH model test completed!")
     print(f"   Results saved to: {RESULTS_PATH}garch_diagnostics_WTI_Crude.png")
+    
+    # Validation check (MOVE THIS INSIDE THE IF BLOCK!)
+    print(f"\n🔍 Validation Check:")
+    print(f"   Sample return std (daily): {wti_returns.std():.4f} ({wti_returns.std()*np.sqrt(252):.1%} annual)")
 
-    # Add this after the existing test code:
+    cond_vol = garch.get_conditional_volatility()
+    print(f"   GARCH avg vol (daily): {cond_vol.mean():.4f} ({cond_vol.mean()*np.sqrt(252):.1%} annual)")
+    print(f"   GARCH current vol: {cond_vol.iloc[-1]*np.sqrt(252):.1%} annual")
 
-# Validation check
-print(f"\n🔍 Validation Check:")
-print(f"   Sample return std (daily): {wti_returns.std():.4f} ({wti_returns.std()*np.sqrt(252):.1%} annual)")
-
-cond_vol = garch.get_conditional_volatility()
-print(f"   GARCH avg vol (daily): {cond_vol.mean():.4f} ({cond_vol.mean()*np.sqrt(252):.1%} annual)")
-print(f"   GARCH current vol: {cond_vol.iloc[-1]*np.sqrt(252):.1%} annual")
-
-# This should be reasonable (20-40% for oil)
-if cond_vol.mean() * np.sqrt(252) > 0.6:  # 60%+
-    print("   ❌ WARNING: Volatility seems too high!")
-else:
-    print("   ✅ Volatility levels look reasonable")
+    # This should be reasonable (20-40% for oil)
+    if cond_vol.mean() * np.sqrt(252) > 0.6:  # 60%+
+        print("   ❌ WARNING: Volatility seems too high!")
+    else:
+        print("   ✅ Volatility levels look reasonable")
