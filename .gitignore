@@ -1,0 +1,27 @@
+ # Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+venv/
+.venv/
+pip-log.txt
+
+# Data files (don't commit large datasets)
+data/raw/*.csv
+data/processed/*.csv
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Results
+results/*.png
+results/*.html
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/settings.jsons
