@@ -1,6 +1,11 @@
 # data/data_pipeline.py
 import sys
 import os
+from pathlib import Path
+
+# Use env var if set, otherwise default to ./data
+DATA_PATH = Path(os.environ.get("DATA_PATH", "data")).resolve()
+DATA_PATH.mkdir(parents=True, exist_ok=True)
 
 # Add parent directory to Python path
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))

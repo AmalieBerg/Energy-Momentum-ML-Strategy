@@ -2,6 +2,15 @@
 import sys
 import os
 
+from config import RESULTS_PATH
+
+# If RESULTS_PATH may be a string, normalize to Path (optional)
+from pathlib import Path
+RESULTS_PATH = Path(RESULTS_PATH)
+RESULTS_PATH.mkdir(parents=True, exist_ok=True)
+
+
+
 # Add parent directory to Python path
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
