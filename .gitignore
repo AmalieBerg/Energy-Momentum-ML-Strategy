@@ -25,3 +25,7 @@ Thumbs.db
 
 # IDE
 .vscode/settings.jsons
+
+# Model files (too large for git)
+models/saved/*.pkl
+*.pkl
