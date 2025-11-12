@@ -2,7 +2,7 @@
 
 Machine learning-based momentum trading strategy for energy futures markets (WTI Crude, Brent Crude, Natural Gas, Heating Oil, Gasoline).
 
-## 🎯 Project Overview
+##  Project Overview
 
 This project implements a quantitative trading strategy that uses machine learning to predict regime changes in energy commodity markets. The strategy combines technical momentum indicators with market regime classification to generate long/short/neutral signals.
 
@@ -12,7 +12,7 @@ This project implements a quantitative trading strategy that uses machine learni
 - **Comprehensive feature engineering**: 147+ technical and market features
 - **Realistic backtesting**: Transaction costs, proper train/test splits, realistic performance metrics
 
-## 📊 Performance Summary (2023-2024 Test Period)
+##  Performance Summary (2023-2024 Test Period)
 
 | Asset | Annual Return | Sharpe Ratio | Max Drawdown | Outperformance vs B&H |
 |-------|--------------|--------------|--------------|----------------------|
@@ -23,12 +23,12 @@ This project implements a quantitative trading strategy that uses machine learni
 | **Portfolio Avg** | **3.10%** | **0.24** | **-28.85%** | **+22.81%** |
 
 ### Key Insights
-- ✅ Strategy significantly outperforms buy & hold (+22.81% on average)
-- ✅ Best performance on **Heating Oil** (16.86% annual return, 0.65 Sharpe)
-- ✅ Consistent positive returns on WTI Crude and Heating Oil
-- ⚠️ Underperformance on Gasoline in 2023-2024 test period
+-  Strategy significantly outperforms buy & hold (+22.81% on average)
+-  Best performance on **Heating Oil** (16.86% annual return, 0.65 Sharpe)
+-  Consistent positive returns on WTI Crude and Heating Oil
+-  Underperformance on Gasoline in 2023-2024 test period
 
-## 🏗️ Project Structure
+## Project Structure
 
 ```
 energy-momentum-ml-strategy/
@@ -60,7 +60,7 @@ energy-momentum-ml-strategy/
 └── README.md                  # This file
 ```
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 ```bash
@@ -101,7 +101,7 @@ POSITION_SIZE = 0.2            # 20% of capital per position
 TRANSACTION_COST = 0.001       # 0.1% transaction costs
 ```
 
-## 🔬 Methodology
+## Methodology
 
 ### Feature Engineering (147 features per asset)
 
@@ -151,7 +151,7 @@ TRANSACTION_COST = 0.001       # 0.1% transaction costs
 - Signals shifted by 1 day (trade on next day's open)
 - Realistic slippage and transaction costs included
 
-## 📈 Results & Analysis
+## Results & Analysis
 
 ### Strategy Strengths
 1. **Regime Adaptability**: Successfully identifies and trades different market regimes
@@ -177,24 +177,12 @@ TRANSACTION_COST = 0.001       # 0.1% transaction costs
 - Actual prices → Used for return calculations
 - Never mix the two (causes nonsensical results)
 
-**2. Proper Return Calculation**
-```python
-# ✓ CORRECT
-asset_returns = df[f'{asset}_Close'].pct_change()
-strategy_returns = signals.shift(1) * asset_returns
-
-# ❌ WRONG (produces fake results)
-# asset_returns = df[f'{asset}_momentum_5d']
-```
-
-**3. Feature Filtering**
+**2. Feature Filtering**
 Price columns (`_Close`, `_Open`, `_High`, `_Low`, `_Volume`) are excluded from ML features to avoid data leakage.
 
-## 📝 Future Enhancements
+## Future Enhancements
 
 ### Short-term
-- [ ] Add Natural Gas price data
-- [ ] Test other ML models (Gradient Boosting, LightGBM, Neural Networks)
 - [ ] Implement position sizing optimization
 - [ ] Add stop-loss mechanisms
 
@@ -210,7 +198,7 @@ Price columns (`_Close`, `_Open`, `_High`, `_Low`, `_Volume`) are excluded from 
 - [ ] Automated execution
 - [ ] Risk management dashboard
 
-## 📚 Academic Background
+## Academic Background
 
 This project combines knowledge from:
 - **Finance**: Portfolio theory, derivatives pricing, risk management
@@ -222,21 +210,16 @@ Author: Amalie Berg
 - Master's in Materials, Energy & Nanotechnology (University of Oslo)
 - Currently pursuing: M.S. Software Engineering (Quantic)
 
-## 🔗 Related Work
 
-- Published research: Solar cell efficiency optimization (Solar Energy Materials, 2019)
-- Thesis: Heston-Nandi GARCH option valuation models (NHH, 2025)
-- Experience: Risk analysis at Storebrand Asset Management
-
-## ⚠️ Disclaimer
+## Disclaimer
 
 This project is for educational and research purposes only. Past performance does not guarantee future results. Trading energy futures involves substantial risk and may not be suitable for all investors.
 
-## 📄 License
+## License
 
 MIT License - See LICENSE file for details
 
-## 🤝 Contributing
+## Contributing
 
 This is a personal research project. For questions or collaboration inquiries, please open an issue.
 
