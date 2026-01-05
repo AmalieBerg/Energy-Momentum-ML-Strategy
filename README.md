@@ -180,35 +180,6 @@ TRANSACTION_COST = 0.001       # 0.1% transaction costs
 **2. Feature Filtering**
 Price columns (`_Close`, `_Open`, `_High`, `_Low`, `_Volume`) are excluded from ML features to avoid data leakage.
 
-## Future Enhancements
-
-### Short-term
-- [ ] Implement position sizing optimization
-- [ ] Add stop-loss mechanisms
-
-### Medium-term
-- [ ] Portfolio optimization across assets
-- [ ] Dynamic position sizing based on volatility
-- [ ] Include more market features (crude oil inventories, refinery utilization)
-- [ ] Walk-forward optimization
-
-### Long-term
-- [ ] Live trading integration
-- [ ] Real-time data feeds
-- [ ] Automated execution
-- [ ] Risk management dashboard
-
-## Academic Background
-
-This project combines knowledge from:
-- **Finance**: Portfolio theory, derivatives pricing, risk management
-- **Physics**: Time series analysis, statistical mechanics analogies
-- **Machine Learning**: Classification, feature engineering, model validation
-
-Author: Amalie Berg
-- Master's in Economics & Finance (NHH/CEMS)
-- Master's in Materials, Energy & Nanotechnology (University of Oslo)
-- Currently pursuing: M.S. Software Engineering (Quantic)
 
 
 ## Disclaimer
