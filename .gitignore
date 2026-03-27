@@ -103,3 +103,8 @@ test_*.py
 # Compiled files
 *.pyc
 *.pyo
+
+# Allow documentation images
+!docs/
+!docs/images/
+!docs/images/*.png
