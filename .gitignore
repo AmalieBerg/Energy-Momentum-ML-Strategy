@@ -1,0 +1,105 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+env/
+ENV/
+.venv
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Project-specific data files
+data/raw/*.csv
+data/raw/*.json
+data/processed/*.csv
+!data/processed/.gitkeep
+
+# Model files (can be large)
+models/saved/*.pkl
+models/saved/*.joblib
+!models/saved/.gitkeep
+
+# Results and outputs
+results/*.png
+results/*.csv
+results/*.html
+!results/.gitkeep
+
+# Backup files
+*.backup
+*.bak
+*_backup_*
+backtest_engine.py.backup
+
+# Temporary and diagnostic files
+diagnose_*.py
+fix_*.py
+patch_*.py
+quick_fix_*.py
+clear_cache.py
+build_cache.py
+compare_*.py
+evaluate_*.py
+manual_fix_*.py
+*_FIX_*.md
+diagnostics_*.png
+
+# Cache files
+cached_*.csv
+
+# Environment files
+.env
+.env.local
+
+# Logs
+*.log
+
+# Test files
+test_*.py
+*_test.py
+
+# Documentation backups
+*.md.backup
+
+# Large data files
+*.h5
+*.hdf5
+*.parquet
+
+# Compiled files
+*.pyc
+*.pyo
